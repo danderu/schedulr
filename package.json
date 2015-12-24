@@ -8,7 +8,7 @@
     "start": "webpack-dev-server",
     "build": "webpack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d docs"
+    "deploy": "gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "babel-preset-react": "^6.3.13",
     "chai": "^3.4.1",
     "css-loader": "^0.23.1",
+    "gh-pages": "^0.8.0",
     "hjs-webpack": "^6.0.0",
     "mocha": "^2.3.4",
     "node-sass": "^3.4.2",
@@ -48,6 +49,9 @@
     "webpack-dev-server": "^1.14.0"
   },
   "babel": {
-    "presets": ["es2015", "react"]
+    "presets": [
+      "es2015",
+      "react"
+    ]
   }
 }
