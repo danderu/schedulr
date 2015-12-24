@@ -1,14 +1,15 @@
+import React from 'react';
+import ReactDom from 'react-dom';
 import Calendar from './domain/calendar';
+import Month from './components/organisms/month';
 
 const calendar = new Calendar();
 
-let table = document.createElement('table');
-calendar.monthDays(2015, 11).forEach((week) => {
-  let row = table.appendChild(document.createElement('tr'));
-  week.forEach((day) => {
-    let cell = row.appendChild(document.createElement('td'));
-    cell.innerHTML = day.toString();
-  });
-});
+const container = document.createElement('div');
 
-document.body.appendChild(table);
+ReactDom.render(
+  <Month weeks={calendar.monthDays(2015, 11)} />,
+  container
+);
+
+document.body.appendChild(container);
