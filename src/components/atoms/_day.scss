@@ -1,0 +1,7 @@
+$highlighted: #fcf8e3;
+
+.sc-Day {
+  &--highlighted {
+    background-color: $highlighted;
+  }
+}

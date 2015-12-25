@@ -7,12 +7,14 @@ export default class Week extends React.Component {
   }
 
   render() {
+    const currentDay = new Date().getDate();
+
     return(
       <div className='sc-Week'>
         <table>
           <tbody>
             <tr>
-              { this.props.week.map((day, index) => <Day day={day} key={index} />) }
+              { this.props.week.map((day, index) => <Day day={day} highlighted={day === currentDay} key={index} /> ) }
             </tr>
           </tbody>
         </table>

@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 export default class Day extends React.Component {
   constructor(...args) {
@@ -6,8 +7,12 @@ export default class Day extends React.Component {
   }
 
   render() {
+    const classes = cx({
+      'sc-Day--highlighted': this.props.highlighted
+    });
+
     return(
-      <td>
+      <td className={classes}>
         {this.props.day > 0 && this.props.day}
       </td>
     );
@@ -15,9 +20,11 @@ export default class Day extends React.Component {
 };
 
 Day.propTypes = {
-  day: React.PropTypes.number
+  day: React.PropTypes.number,
+  highlighted: React.PropTypes.bool
 };
 
 Day.defaultPropTypes = {
-  day: 0
+  day: 0,
+  highlighted: false
 };
