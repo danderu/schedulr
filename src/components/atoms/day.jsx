@@ -1,5 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
+import Event from './event';
 
 export default class Day extends React.Component {
   constructor(...args) {
@@ -17,18 +18,18 @@ export default class Day extends React.Component {
 
     return(
       <td className={classes} onClick={this.handleClick}>
-        {this.props.day > 0 && this.props.day}
+        {this.props.day.number > 0 && this.props.day.number}
+        {this.props.day.events.map(event => <Event title={event.title} />)}
       </td>
     );
   }
 }
 
 Day.propTypes = {
-  day: React.PropTypes.number,
+  day: React.PropTypes.object,
   highlighted: React.PropTypes.bool
 };
 
 Day.defaultPropTypes = {
-  day: 0,
   highlighted: false
 };

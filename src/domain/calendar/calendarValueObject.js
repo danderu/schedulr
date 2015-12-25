@@ -1,5 +1,8 @@
-export default class Calendar {
+import ValueObject from '../valueObject';
+
+export default class CalendarValueObject extends ValueObject {
   constructor(firstWeekDay = 1){
+    super(firstWeekDay);
     this.firstWeekDay = firstWeekDay;
   }
 

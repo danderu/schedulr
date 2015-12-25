@@ -14,7 +14,7 @@ export default class Week extends React.Component {
         <table>
           <tbody>
             <tr>
-              { this.props.week.map((day, index) => <Day day={day} highlighted={day === currentDay} key={index} /> ) }
+              { this.props.week.map((day, index) => <Day day={day} highlighted={day.number === currentDay} key={index} /> ) }
             </tr>
           </tbody>
         </table>
