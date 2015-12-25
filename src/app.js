@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import Calendar from './domain/calendar';
 import Month from './components/organisms/month';
+import './app.scss';
 
 const calendar = new Calendar();
 

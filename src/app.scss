@@ -1,0 +1,9 @@
+@import './components/molecules/week';
+
+$typography-color: #444444;
+
+body {
+  color: $typography-color;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}

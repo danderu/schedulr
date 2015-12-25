@@ -10,7 +10,11 @@ export default class Month extends React.Component {
     return(
       <table>
         <tbody>
-          {this.props.weeks.map((week, index) => <Week week={week} key={index} />) }
+          <tr>
+            <td>
+              {this.props.weeks.map((week, index) => <Week week={week} key={index} />) }
+            </td>
+          </tr>
         </tbody>
       </table>
     );

@@ -8,9 +8,15 @@ export default class Week extends React.Component {
 
   render() {
     return(
-      <tr>
-        { this.props.week.map((day, index) => <Day day={day} key={index} />) }
-      </tr>
+      <div className='sc-Week'>
+        <table>
+          <tbody>
+            <tr>
+              { this.props.week.map((day, index) => <Day day={day} key={index} />) }
+            </tr>
+          </tbody>
+        </table>
+      </div>
     );
   }
 };
