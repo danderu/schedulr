@@ -1,5 +1,4 @@
 import React from 'react';
-import Day from '../atoms/day';
 
 export default class WeekHeader extends React.Component {
   constructor(...args) {
@@ -19,7 +18,7 @@ export default class WeekHeader extends React.Component {
       </div>
     );
   }
-};
+}
 
 WeekHeader.propTypes = {
   dayNames: React.PropTypes.array

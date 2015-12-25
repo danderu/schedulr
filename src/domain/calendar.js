@@ -12,26 +12,27 @@ export default class Calendar {
   }
 
   _monthDates(year, month, dayFormatter, weekFormatter) {
-    if ((typeof year !== "number") || (year < 1970)) {
+    if ((typeof year !== 'number') || (year < 1970)) {
       throw new Error('year must be a number >= 1970');
-    };
-    if ((typeof month !== "number") || (month < 0) || (month > 11)) {
+    }
+
+    if ((typeof month !== 'number') || (month < 0) || (month > 11)) {
       throw new Error('month must be a number (Jan is 0)');
-    };
+    }
 
     var weeks = [],
     week = [],
     i = 0,
     date = this._weekStartDate(new Date(year, month, 1));
     do {
-      for (i=0; i<7; i++) {
+      for (i = 0; i < 7; i++) {
         week.push(dayFormatter ? dayFormatter(date) : date);
         date = new Date(date.getTime());
         date.setDate(date.getDate() + 1);
       }
       weeks.push(weekFormatter ? weekFormatter(week) : week);
       week = [];
-    } while ((date.getMonth()<=month) && (date.getFullYear()===year));
+    } while ((date.getMonth() <= month) && (date.getFullYear() === year));
 
     return weeks;
   }
@@ -71,5 +72,5 @@ export default class Calendar {
       'Sunday'
     ];
   }
-};
+}
 

@@ -27,7 +27,7 @@ export default class Month extends React.Component {
       </table>
     );
   }
-};
+}
 
 Month.propTypes = {
   weeks: React.PropTypes.array

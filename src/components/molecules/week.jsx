@@ -21,7 +21,7 @@ export default class Week extends React.Component {
       </div>
     );
   }
-};
+}
 
 Week.propTypes = {
   week: React.PropTypes.array
