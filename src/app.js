@@ -5,11 +5,11 @@ import Month from './components/organisms/month';
 import './app.scss';
 
 const calendar = new Calendar();
-
 const container = document.createElement('div');
 
 ReactDom.render(
-  <Month weeks={calendar.monthDays(2015, 11)} />,
+  <Month weeks={calendar.monthDays(2015, 11)}
+    dayNames={calendar.dayNames} />,
   container
 );
 

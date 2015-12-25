@@ -1,5 +1,6 @@
 import React from 'react';
 import Week from '../molecules/week';
+import WeekHeader from '../molecules/weekHeader';
 
 export default class Month extends React.Component {
   constructor(...args) {
@@ -9,10 +10,17 @@ export default class Month extends React.Component {
   render() {
     return(
       <table>
+        <thead>
+          <tr>
+            <td>
+              <WeekHeader {...this.props} />
+            </td>
+          </tr>
+        </thead>
         <tbody>
           <tr>
             <td>
-              {this.props.weeks.map((week, index) => <Week week={week} key={index} />) }
+              {this.props.weeks && this.props.weeks.map((week, index) => <Week week={week} key={index} />) }
             </td>
           </tr>
         </tbody>

@@ -1,8 +1,8 @@
 $light-gray: #dddddd;
 
-.sc-Week {
-  height: 4em;
-  min-height: 4em;
+.sc-Week--header {
+  height: 1em;
+  min-height: 1em;
   width: 100%;
 
   table {
@@ -12,13 +12,20 @@ $light-gray: #dddddd;
     table-layout: fixed;
     width: 100%;
 
-    td {
+    td,
+    th {
       border-color: $light-gray;
       border-style: solid;
       border-width: 1px;
       padding: 0 2px;
       text-align: right;
       vertical-align: top;
+    }
+
+    th {
+      border-bottom: 0;
+      font-weight: 400;
+      text-align: center;
     }
   }
 }
