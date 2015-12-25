@@ -1,5 +1,5 @@
 export default class Calendar {
-  constructor(firstWeekDay = 0){
+  constructor(firstWeekDay = 1){
     this.firstWeekDay = firstWeekDay;
   }
 
