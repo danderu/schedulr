@@ -19,7 +19,7 @@ export default class Day extends React.Component {
     return(
       <td className={classes} onClick={this.handleClick}>
         {this.props.day.number > 0 && this.props.day.number}
-        {this.props.day.events.map(event => <Event title={event.title} />)}
+        {this.props.day.events.map((event, index) => <Event title={event.title} key={index} />)}
       </td>
     );
   }
